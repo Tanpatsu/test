@@ -4,7 +4,7 @@
 
 # 1.文字の出力
 # 文字列には''もしくは""で囲む
-print("Hello world")
+print('Hello world')
 
 # 数字は囲む必要なし
 print(1)
@@ -29,7 +29,7 @@ print(5 % 3)
 
 # 3.変数
 # 変数nameに文字を代入
-name = "テスト"
+name = 'テスト'
 
 print(name)
 
@@ -163,10 +163,10 @@ print('支払い金額は' + str(total_price) + '円です')
 
 # moneyとtotal_priceの比較結果によって条件を分岐
 if money > total_price:
-    print('りんごを' + str(count) +'個買いました')
-    print('預金は' + str(money - total_price) +'円です')
+    print('りんごを' + str(count) + '個買いました')
+    print('預金は' + str(money - total_price) + '円です')
 elif money == total_price:
-    print('りんごを' + str(count) +'個買いました')
+    print('りんごを' + str(count) + '個買いました')
     print('財布が空になりました')
 else:
     print('お金が足りません')
