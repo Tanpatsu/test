@@ -15,17 +15,18 @@ print(s)
 
 
 # 2つの自然数の最大公約数を求める
-a,b = input('aの値を入力:'), input('bの値を入力')
+a, b = input('aの値を入力:'), input('bの値を入力:')
 
-# 入力値を数値型に変換
-a,b = int(a),int(b)
+a, b = int(a), int(b)  # 入力値を数値型に変換
 
-#再帰関数
-def gcd(a, b):
+
+def gcd(a, b):  # 再帰関数
     if b == 0:
         return a
     else:
-        return gcd(b, a%b)
+        return gcd(b, a % b)
+
+
 print('値a(' + str(a) + ')と値b(' + str(b) + ')の最大公約数は' + str(gcd(a, b)) + 'です')
 
 
