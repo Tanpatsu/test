@@ -5,30 +5,19 @@
 # Hello, world!を表示
 print('Hello, world!')
 
-
 # 1から50までの和を計算して表示
-s = 0
-
-for x in list(range(1, 51)):
-    s += x
-print(s)
-
+print(sum(range(1, 51)))
 
 # 2つの自然数の最大公約数を求める
-a, b = input('aの値を入力:'), input('bの値を入力:')
-
-a, b = int(a), int(b)  # 入力値を数値型に変換
+int_value1, int_value2 = 15, 5
 
 
-def gcd(a, b):  # 再帰関数
-    if b == 0:
-        return a
-    else:
-        return gcd(b, a % b)
+# 再帰関数
+def greatest_common_divisor(int_value1, int_value2):
+    return int_value1 if int_value2 == 0 else greatest_common_divisor(int_value2, int_value1 % int_value2)
 
 
-print('値a(' + str(a) + ')と値b(' + str(b) + ')の最大公約数は' + str(gcd(a, b)) + 'です')
-
+print('値a(' + str(int_value1) + ')と値b(' + str(int_value2) + ')の最大公約数は' + str(greatest_common_divisor(int_value1, int_value2)) + 'です')
 
 # 2つの自然数の最小公倍数を求める
-print('値a(' + str(a) + ')と値b(' + str(b) + ')の最小公倍数は' + str(a * b // gcd(a, b)) + 'です')
+print('値a(' + str(int_value1) + ')と値b(' + str(int_value2) + ')の最小公倍数は' + str(int_value1 * int_value2 // greatest_common_divisor(int_value1, int_value2)) + 'です')
